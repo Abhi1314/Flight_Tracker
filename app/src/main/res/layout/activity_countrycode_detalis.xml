@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AirportInfoActivity">
+
+        <include
+            android:id="@+id/toolBarLayout"
+            layout="@layout/toolbar_layout" />
+        <RelativeLayout
+            android:id="@+id/llcountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBarLayout"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/main_bg"
+            >
+            <RelativeLayout
+                android:id="@+id/rlCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="10dp"
+                >
+                <ImageView
+                    android:id="@+id/Img"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_location" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/CountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country name"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/rlCategory"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:id="@+id/llcountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/rlCategory"
+                android:orientation="horizontal"
+                android:layout_below="@id/CountryName"
+                android:gravity="center"
+                android:weightSum="4">
+                <TextView
+                    android:id="@+id/Code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Code:"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/Codeinput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Code"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/Code3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Code3:"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Code3input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Code3"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include
+            layout="@layout/nodata"
+            android:id="@+id/nodatafound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBarLayout"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</layout>
+

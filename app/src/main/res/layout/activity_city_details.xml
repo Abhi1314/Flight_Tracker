@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AirportInfoActivity">
+        <include
+            android:id="@+id/toolBarLayout"
+            layout="@layout/toolbar_layout" />
+        <RelativeLayout
+            android:id="@+id/ll_Dropbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/toolBarLayout"
+            android:layout_marginHorizontal="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/main_bg"
+            >
+            <ImageView
+                android:id="@+id/Img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/ic_location"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cityName"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/dropResult"
+                android:layout_toEndOf="@+id/Img"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="City name"/>
+
+            <ImageView
+                android:id="@+id/dropResult"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/ic_close_arrow"
+                />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/cityinfo"
+            android:id="@+id/viewCityResult"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/ll_Dropbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <include
+            layout="@layout/nodata"
+            android:id="@+id/nodatafound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolBarLayout"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</layout>

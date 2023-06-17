@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolBarLayout"
+            layout="@layout/toolbar_layout" />
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvFlightDetails"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/toolBarLayout"-->
+<!--            android:paddingBottom="15dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            tools:listitem="@layout/flightlist"/>-->
+      <include
+          layout="@layout/flightlist"
+          android:id="@+id/flightResult"
+          android:layout_below="@id/toolBarLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+      </include>
+
+        <include
+            layout="@layout/nodata"
+            android:id="@+id/nodatafound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/flightResult"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</layout>

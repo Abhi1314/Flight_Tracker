@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/maincolor"
+        tools:context=".activity.IntroActivity">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_cloud"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_planeview"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/sp1"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/khulabold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/sp2"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/khularegular"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,33 @@
+package com.example.flighttracker.response
+
+data class ResponseFlightInfo(
+    var arr_city: String="",
+    var arr_iata: String="",
+    var arr_icao: String="",
+    var arr_name: String="",
+    var arr_time: String="",
+    var arr_time_ts: Int=0,
+    var arr_time_utc: String="",
+    var dep_actual: String="",
+    var arr_actual: String="",
+    var delayed: String="",
+    var dep_actual_ts: Int=0,
+    var dep_actual_utc: String="",
+    var dep_city: String="",
+    var dep_country: String="",
+    var dep_estimated: String="",
+    var dep_estimated_ts: Int=0,
+    var dep_estimated_utc: String="",
+    var dep_iata: String="",
+    var dep_icao: String="",
+    var dep_name: String="",
+    var dep_time: String="",
+    var dep_time_ts: Int=0,
+    var dep_time_utc: String="",
+    var duration: Int=0,
+    var flight_iata: String="",
+    var flight_icao: String="",
+    var flight_number: String="",
+    var status: String="",
+    var updated: Int=0
+)

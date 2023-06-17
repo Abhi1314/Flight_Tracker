@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AirlineFleetActivity">
+        <include
+            android:id="@+id/toolBarLayout"
+            layout="@layout/toolbar_layout" />
+        <TextView
+            android:id="@+id/airlineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Airline iata code:"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/toolBarLayout"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edIataCodeAirline"
+            android:padding="14dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_below="@id/airlineText"
+            android:hint="enter the airline iata code"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/ic_inputbg"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/airlineExample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ex:IndiGO(6e) or Air India(AI)"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/edIataCodeAirline"/>
+
+        <TextView
+            android:id="@+id/SearchAirlineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/airlineExample"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/main_bg"
+            android:text="Search Airline"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+</layout>
